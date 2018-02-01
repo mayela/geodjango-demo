@@ -1,7 +1,5 @@
 from rest_framework import serializers
-from rest_framework_gis.serializers import GeoModelSerializer, GeoFeatureModelSerializer
-
-from vets.serializers import VetSerializer
+from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
 from hospitals.models import Hospital
 

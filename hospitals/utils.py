@@ -3,7 +3,7 @@ from django.contrib.gis.measure import D
 
 from hospitals.models import Hospital
 
-def closest_stops_by_location(latitude, longitude, distance=5):
+def closest_hospitals_by_location(latitude, longitude, distance=5):
     point_wkt = 'POINT({} {})'.format(longitude, latitude)
     point = GEOSGeometry(point_wkt, srid=4326)
     hospitals = Hospital.objects.filter(

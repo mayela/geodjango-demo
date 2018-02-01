@@ -8,8 +8,7 @@ from hospitals.models import Hospital
 
 #class HospitalSerializer(serializers.ModelSerializer):
 class HospitalSerializer(GeoFeatureModelSerializer):
-    chief_vet = VetSerializer()
     class Meta:
         model = Hospital
         geo_field = "location"
-        fields = ('chief_vet', 'name', 'address', 'license')
+        fields = ('name', 'address', 'license')

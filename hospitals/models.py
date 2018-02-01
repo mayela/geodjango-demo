@@ -11,3 +11,6 @@ class Hospital(models.Model):
     address = models.CharField('Address', max_length=255)
     location = models.PointField()
     license = models.UUIDField(default=uuid.uuid4, editable=False)
+
+    def __str__(self):
+        return self.name
